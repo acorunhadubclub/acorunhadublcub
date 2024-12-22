@@ -1,1 +1,116 @@
-inicio
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de Página Web</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #F8F2E2;
+        }
+
+        /* Estilo del menú */
+        header {
+            background-color: #207690;
+            padding: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        header .social-links a {
+            margin-left: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Separación con fondo #207690 */
+        .separator {
+            background-color: #207690;
+            height: 10px;
+        }
+
+        /* Estilo para la sección principal */
+        .main-content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            font-size: 36px;
+            color: #207690;
+        }
+
+        /* Estilo de la parte inferior con gris degradado */
+        .footer {
+            background: linear-gradient(to right, #D3D3D3, #A9A9A9);
+            color: white;
+            padding: 50px;
+            background-image: url('https://via.placeholder.com/1500x500'); /* Cambia la URL con tu propia imagen */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <header>
+        <div class="logo">Mi Logo</div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </header>
+
+    <!-- Separación -->
+    <div class="separator"></div>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h1>Bienvenidos a nuestra página web</h1>
+        <p>Aquí puedes poner la información principal de tu sitio web.</p>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="footer">
+        <p>© 2024 Todos los derechos reservados</p>
+    </div>
+
+</body>
+</html>
