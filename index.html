@@ -1,210 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <!-- Basic Page Needs -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A Coruña Dub Club</title>
+
+    <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Coruña Dub Club</title> <!-- Título de la página en la pestaña -->
-    
-    <!-- Favicon (icono de la pestaña) -->
-    <link rel="icon" href="https://acorunhadubclub.wordpress.com/wp-content/uploads/2024/11/lolologo-sen-fondo-3.png?w=823" type="image/png"> <!-- Reemplaza esta URL con tu imagen de favicon -->
 
-    <!-- Fuentes para un estilo vintage -->
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Varela" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://github.com/rastpeter/acorunhadublcub/blob/255aa7e4f21a5c5b222644090d2fa0222196bc44/lolologo%20sen%20fondo.png?raw=true">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Custom Colors -->
     <style>
         body {
-            margin: 0;
-            font-family: 'Concert One', cursive;
-            background-color: rgb(251,243,235); /* Beige claro */
-            color: rgb(28,76,84); /* Verde oscuro */
-            line-height: 1.6;
-        }
-
-        /* Barra de navegación */
-        .topnav {
-            overflow: hidden;
-            background-color: rgb(28,76,84); /* Color verde oscuro */
-            position: sticky; /* Fija la barra al hacer scroll */
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Título del menú */
-        .topnav .logo {
-            font-size: 40px;
-            padding: 20px;
-            text-align: center;
-            color: rgb(251,243,235); /* Blanco beige */
-            display: block;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: bold;
-            border-bottom: 5px solid rgb(251,243,235);
-        }
-
-        /* Estilo de los enlaces */
-        .topnav a {
-            display: block;
+            background-color: rgba(69,108,110,255);
             color: rgb(251,243,235);
-            padding: 14px 20px;
-            text-decoration: none;
-            font-size: 18px;
-            text-transform: uppercase;
         }
-
-        .topnav a:hover {
-            background-color: rgb(251,243,235);
-            color: rgb(28,76,84);
-        }
-
-        /* Menú desplegable */
-        .topnav .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .topnav .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgb(28,76,84);
-            min-width: 160px;
-            z-index: 1;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            text-align: left;
-        }
-
-        .topnav .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .topnav .dropdown-content a {
-            padding: 12px 16px;
-            background-color: rgb(28,76,84);
+        h1, h2, h3, h4, h5, h6 {
             color: rgb(251,243,235);
-            font-size: 16px;
         }
-
-        .topnav .dropdown-content a:hover {
-            background-color: rgb(251,243,235);
-            color: rgb(28,76,84);
+        .btn {
+            background-color: rgb(220,212,211);
+            color: black;
         }
-
-        /* Sección principal */
-        .main-content {
-            padding: 50px;
-            text-align: center;
-            background-image: url('https://via.placeholder.com/1500x500'); /* Imagen de fondo estilo retro */
-            background-size: cover;
-            background-position: center;
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.6); /* Agregar sombra al fondo */
-        }
-
-        .main-content h1 {
-            font-size: 70px;
-            color: rgb(251,243,235); /* Blanco beige */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            letter-spacing: 5px;
-            margin-bottom: 20px;
-        }
-
-        /* Estilo para el contenido en dos columnas */
-        .content-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .content-columns .left-column {
-            text-align: left;
-            color: rgb(28, 76, 84);
-            font-size: 18px;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .content-columns .right-column {
-            text-align: center;
-        }
-
-        .content-columns .right-column img {
-            max-width: 80%;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-
-        /* Footer */
-        .footer {
-            background: rgb(28, 76, 84);
+        .btn:hover {
+            background-color: rgb(32,30,29);
             color: rgb(251,243,235);
-            padding: 30px;
-            text-align: center;
-            font-size: 14px;
-            box-shadow: inset 0px -10px 20px rgba(0, 0, 0, 0.5);
-            margin-top: 40px;
-        }
-
-        /* Efecto hover para las imágenes */
-        .footer img:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
         }
     </style>
-
-    <script>
-        function toggleDropdown() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
 </head>
 <body>
-
-    <!-- Barra de navegación -->
-    <div class="topnav" id="myTopnav">
-        <div class="logo" onclick="toggleDropdown()">A Coruña Dub Club</div>
-        <div class="dropdown">
-            <a href="javascript:void(0)">A Coruña Dub Club</a>
-            <div class="dropdown-content">
-                <a href="#whoweare">Que somos?</a>
-                <a href="#events">Eventos</a>
-                <a href="#store">Tenda</a>
-                <a href="#calendar">Calendario</a>
-                <a href="#contact">Contacto</a>
-            </div>
+    <!-- Hero Section -->
+    <div id="top" class="hero background-overlay">
+        <video autoplay muted loop style="width: 100%; height: auto; position: absolute; z-index: -1;">
+            <source src="https://raw.githubusercontent.com/rastpeter/acorunhadublcub/main/SaveInsta.App%20-%203208383554039241409.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content text-center">
+            <h1>A Coruña Dub Club</h1>
+            <p class="hero-job">sound system na Galiza</p>
         </div>
     </div>
 
-    <!-- Contenido principal -->
-    <div class="main-content">
-        <h1>Sound System na Galiza</h1>
-        <div class="content-columns">
-            <!-- Columna izquierda -->
-            <div class="left-column">
-                <p>A Coruña Dub Club é unha asociación formada por varios colectivos galegos, adicada a promover a cultura <strong>soundsystem</strong>, as sesións de <strong>dub</strong> e a música <strong>reggae</strong>.</p>
-                <p>Unha <strong>sesión de dub</strong> é unha experiencia sonora inmersiva, onde a música se reproduce a través de <strong>enormes altofalantes</strong> artesanais deseñados para resaltar os graves máis profundos e vibrantes.</p>
-                <p>Os <strong>soundsystems</strong>, auténticos protagonistas destas sesións, non só amplifican a música, senón que crean unha conexión directa co público a través das súas potentes frecuencias e a maxia do <strong>dub</strong>. É unha celebración do ritmo, o baile e a comunidade, onde cada compás fai vibrar corpo e alma.</p>
+    <!-- Navigation -->
+    <header id="masthead" class="site-header">
+        <nav id="primary-navigation" class="site-navigation">
+            <div class="container">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#quensomos">Quen Somos</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#tenda">Tenda</a></li>
+                    <li><a href="#calendario">Calendario</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
             </div>
+        </nav>
+    </header>
 
-            <!-- Columna derecha -->
-            <div class="right-column">
-                <img src="https://github.com/rastpeter/acorunhadublcub/blob/255aa7e4f21a5c5b222644090d2fa0222196bc44/lolologo%20sen%20fondo.png?raw=true" alt="Logo A Coruña Dub Club">
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Section -->
+        <section id="quensomos" class="container text-center">
+            <h2>Quen Somos</h2>
+            <p>A Coruña Dub Club é unha asociación formada por varios colectivos galegos, adicada a promover a cultura soundsystem, as sesións de dub e a música reggae.</p>
+            <p>Unha sesión de dub é unha experiencia sonora inmersiva, onde a música se reproduce a través de enormes altofalantes artesanais deseñados para resaltar os graves máis profundos e vibrantes.</p>
+            <p>Os soundsystems, auténticos protagonistas destas sesións, non só amplifican a música, senón que crean unha conexión directa co público a través das súa potentes frecuencias e a maxia do dub. É unha celebración do ritmo, o baile e a comunidade, onde cada compás fai vibrar corpo e alma.</p>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="text-center" style="background-color: black; color: white; padding: 20px;">
+            <blockquote>
+                <p>"A música é a miña relixión, a miña medicina, e a miña arma."</p>
+                <footer>Lee "Scratch" Perry</footer>
+            </blockquote>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="eventos" class="container text-center">
+            <h2>Eventos</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_329974978_554196739998579_4593743417129709072_n_1080.jpg?raw=true" alt="Evento 1" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_455259212_465005816418825_3333643542659967195_n_1080.jpg?raw=true" alt="Evento 2" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_448105943_986388922994596_2151237006171788926_n_1080.jpg?raw=true" alt="Evento 3" class="img-fluid">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_436233357_762971975901321_7648516413479491029_n_1080.jpg?raw=true" alt="Evento 4" class="img-fluid">
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <div class="footer">
-        <p>© 2024 A Coruña Dub Club - Todos os dereitos reservados</p>
-    </div>
-
+    <footer class="text-center" style="padding: 20px; background-color: rgb(32,30,29); color: rgb(220,212,211);">
+        <p>&copy; 2024 A Coruña Dub Club</p>
+    </footer>
 </body>
 </html>
