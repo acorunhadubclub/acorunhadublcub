@@ -113,8 +113,112 @@
 <div style="margin:0; padding:0; display:flex; justify-content:center; align-items:center; height:100vh; width:100vw;">
   <p style="font-size:clamp(64px, 6vw, 100px); font-style:normal; font-weight:100; line-height:1; text-transform:uppercase; text-align:center; margin:0;">
     facendo dub<br>dende o 2021.
-  </p>
+  <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #FDFBEF;
+            color: #207690;
+            font-family: 'Chivo', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #207690;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #207690;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-group button {
+            background-color: #207690;
+            color: #ffffff;
+            border: none;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #005f85;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contáctanos</h1>
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body></p>
+  
 </div>
+
 <div class="wp-block-column is-vertically-aligned-top is-layout-flow wp-block-column-is-layout-flow">
 <div style="height:8vw" aria-hidden="true" class="wp-block-spacer"></div>
 <figure class="wp-block-image alignright size-full"><img src="https://acorunhadubclub.wordpress.com/wp-content/uploads/2024/11/lolologo-sen-fondo-4.png" alt="" class="wp-image-56" /></figure>
