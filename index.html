@@ -36,6 +36,28 @@
             background-color: rgb(32,30,29);
             color: rgb(251,243,235);
         }
+        .navbar {
+            background-color: rgba(69,108,110,255);
+        }
+        .navbar-nav li a {
+            color: rgb(251,243,235) !important;
+        }
+        .navbar-nav li a:hover {
+            background-color: rgb(220,212,211);
+            color: black !important;
+        }
+        .logo-center {
+            display: block;
+            margin: 20px auto;
+            width: 150px;
+        }
+        .gallery img {
+            margin: 10px;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
@@ -48,19 +70,25 @@
             <h1>A Coruña Dub Club</h1>
             <p class="hero-job">sound system na Galiza</p>
         </div>
+        <img src="https://github.com/rastpeter/acorunhadublcub/blob/255aa7e4f21a5c5b222644090d2fa0222196bc44/lolologo%20sen%20fondo.png?raw=true" alt="Logo" class="logo-center">
     </div>
 
     <!-- Navigation -->
     <header id="masthead" class="site-header">
-        <nav id="primary-navigation" class="site-navigation">
+        <nav id="primary-navigation" class="site-navigation navbar navbar-expand-lg">
             <div class="container">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#quensomos">Quen Somos</a></li>
-                    <li><a href="#eventos">Eventos</a></li>
-                    <li><a href="#tenda">Tenda</a></li>
-                    <li><a href="#calendario">Calendario</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#quensomos">Quen Somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tenda">Tenda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#calendario">Calendario</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -68,7 +96,7 @@
     <!-- Main Content -->
     <main>
         <!-- Intro Section -->
-        <section id="quensomos" class="container text-center">
+        <section id="quensomos" class="container text-center py-5">
             <h2>Quen Somos</h2>
             <p>A Coruña Dub Club é unha asociación formada por varios colectivos galegos, adicada a promover a cultura soundsystem, as sesións de dub e a música reggae.</p>
             <p>Unha sesión de dub é unha experiencia sonora inmersiva, onde a música se reproduce a través de enormes altofalantes artesanais deseñados para resaltar os graves máis profundos e vibrantes.</p>
@@ -84,27 +112,27 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="eventos" class="container text-center">
+        <section id="eventos" class="container text-center py-5">
             <h2>Eventos</h2>
-            <div class="row">
+            <div class="row gallery">
                 <div class="col-md-3">
-                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_329974978_554196739998579_4593743417129709072_n_1080.jpg?raw=true" alt="Evento 1" class="img-fluid">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_329974978_554196739998579_4593743417129709072_n_1080.jpg?raw=true" alt="Evento 1">
                 </div>
                 <div class="col-md-3">
-                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_455259212_465005816418825_3333643542659967195_n_1080.jpg?raw=true" alt="Evento 2" class="img-fluid">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_455259212_465005816418825_3333643542659967195_n_1080.jpg?raw=true" alt="Evento 2">
                 </div>
                 <div class="col-md-3">
-                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_448105943_986388922994596_2151237006171788926_n_1080.jpg?raw=true" alt="Evento 3" class="img-fluid">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_448105943_986388922994596_2151237006171788926_n_1080.jpg?raw=true" alt="Evento 3">
                 </div>
                 <div class="col-md-3">
-                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_436233357_762971975901321_7648516413479491029_n_1080.jpg?raw=true" alt="Evento 4" class="img-fluid">
+                    <img src="https://github.com/rastpeter/acorunhadublcub/blob/main/Snapinsta.app_436233357_762971975901321_7648516413479491029_n_1080.jpg?raw=true" alt="Evento 4">
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="text-center" style="padding: 20px; background-color: rgb(32,30,29); color: rgb(220,212,211);">
+    <footer class="text-center py-3" style="background-color: rgb(32,30,29); color: rgb(220,212,211);">
         <p>&copy; 2024 A Coruña Dub Club</p>
     </footer>
 </body>
