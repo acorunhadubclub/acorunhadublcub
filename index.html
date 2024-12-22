@@ -22,16 +22,16 @@
             position: sticky; /* Hace que la barra siga visible cuando se haga scroll */
             top: 0;
             z-index: 1000; /* Asegura que esté sobre otros elementos */
+            width: 100%; /* Asegura que el menú ocupe todo el ancho de la pantalla */
         }
 
         .topnav a {
-            float: left;
             display: block;
             color: rgb(251,243,235);
             text-align: center;
-            padding: 14px 16px;
+            padding: 14px 20px; /* Ajuste para hacer los elementos más estrechos */
             text-decoration: none;
-            font-size: 17px;
+            font-size: 16px; /* Reducimos un poco el tamaño de la fuente */
         }
 
         .topnav a:hover {
@@ -46,13 +46,6 @@
 
         .topnav .icon {
             display: none;
-        }
-
-        /* Agregar logo en el menú */
-        .topnav .logo {
-            display: inline-block;
-            height: 40px;
-            margin-right: 10px;
         }
 
         /* Menú desplegable para pantallas pequeñas */
@@ -76,6 +69,13 @@
                 display: block;
                 text-align: left;
             }
+        }
+
+        /* Agregar logo en el menú */
+        .topnav .logo {
+            display: inline-block;
+            height: 40px;
+            margin-right: 10px;
         }
 
         /* Estilo de la parte principal */
@@ -132,10 +132,11 @@
     <!-- Barra de navegación -->
     <div class="topnav" id="myTopnav">
         <a href="#" class="active"><img src="https://acorunhadubclub.wordpress.com/wp-content/uploads/2024/11/lolologo-sen-fondo-3.png?w=823" alt="Logo" class="logo">A Coruña Dub Club</a>
-        <a href="#home">Inicio</a>
-        <a href="#news">Noticias</a>
+        <a href="#whoweare">¿Qué somos?</a>
+        <a href="#events">Eventos</a>
+        <a href="#store">Tenda</a>
+        <a href="#calendar">Calendario</a>
         <a href="#contact">Contacto</a>
-        <a href="#about">Sobre Nosotros</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
         </a>
