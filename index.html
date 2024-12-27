@@ -63,91 +63,72 @@
         position: relative;
         top: -250px; /* Mueve el bloque 200px hacia arriba */
     }
-<p></style>
-<div class="event-image-container">
-    <img src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Image/1%20aniversario.jpg?raw=true" alt="1 Aniversario" class="half-size-image">
-</div>
-
-<!-- Añade este estilo al CSS -->
-<style>
-    .event-image-container {
-        display: flex; /* Flexbox para centrar contenido */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        height: 100vh; /* Ocupa toda la altura de la página */
-        margin: 0; /* Elimina márgenes adicionales */
-    }
-    .half-size-image {
-        max-width: 50%; /* Tamaño reducido al 50% */
-        height: auto; /* Mantiene las proporciones de la imagen */
-    }
-</style>
-<!-- wp:column {"verticalAlignment":"top"} -->
-<div class="wp-block-column is-vertically-aligned-top move-down">
-    <!-- wp:spacer {"height":"8vw"} -->
-    <!-- /wp:spacer -->
-
-    <!-- wp:image {"id":56,"sizeSlug":"full","linkDestination":"none","align":"right"} -->
-    <!-- /wp:image -->
-</div>
-
-<!-- Otros bloques permanecen sin cambios -->
-<!-- wp:template-part {"slug":"footer","theme":"pub/archeo","tagName":"footer","area":"footer"} /-->
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Último Evento.</title>
+    <title>Último Evento</title>
     <style>
-        .custom-text-color {
-            color: #247494; /* Cambia el color del texto */
+        /* Estilo general para centrar contenidos */
+        .event-image-container {
+            display: flex; /* Flexbox para centrar contenido */
+            flex-direction: column; /* Coloca elementos verticalmente */
+            align-items: center; /* Centra horizontalmente */
+            justify-content: center; /* Centra verticalmente */
+            height: 100vh; /* Ocupa toda la altura de la página */
+            margin: 0; /* Elimina márgenes adicionales */
+        }
+        .half-size-image {
+            max-width: 50%; /* Tamaño reducido al 50% */
+            height: auto; /* Mantiene las proporciones de la imagen */
+        }
+        .event-title {
+            font-size: 2rem;
+            margin-top: 1rem; /* Espaciado encima del texto */
+            text-align: center;
+            color: #247494; /* Personaliza el color del texto */
+        }
+        footer {
+            position: fixed;
+            bottom: 0; /* Sitúa el texto en la parte inferior */
+            width: 100%; /* Ocupa el ancho completo */
+            text-align: center;
+            font-size: 1rem;
+            background-color: #f1f1f1; /* Fondo gris claro */
+            padding: 0.5rem;
+            color: #000; /* Color del texto */
         }
     </style>
-    <div class="wp-block-group alignwide has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-        <nav aria-label="Navegación 2" class="items-justified-center wp-block-navigation is-content-justification-center is-layout-flex wp-container-core-navigation-is-layout-2 wp-block-navigation-is-layout-flex">
-            <ul class="wp-block-navigation__container items-justified-center wp-block-navigation">
-                <li class="wp-block-navigation-item wp-block-navigation-link">
-                    <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Quen-somos/Quen-somos.html" class="wp-block-navigation-item__content">
-                        <A href="./" class="wp-block-navigation-item__label">Quen somos?</A>
-                    </a>
-                </li>
-                <li class="wp-block-navigation-item wp-block-navigation-link">
-                    <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Eventos/Eventos.html" class="wp-block-navigation-item__content">
-                        <A href="./eventos.html" class="wp-block-navigation-item__label">Eventos</A>
-                    </a>
-                </li>
-                <li class="wp-block-navigation-item wp-block-navigation-link">
-                    <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Tenda/tenda.html" class="wp-block-navigation-item__content">
-                        <A href="./tenda.html" class="wp-block-navigation-item__label">Tenda</A>
-                    </a>
-                </li>
-                <li class="wp-block-navigation-item wp-block-navigation-link">
-                    <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Calendario/Calendario.html" class="wp-block-navigation-item__content">
-                        <A href="./calendario.html" class="wp-block-navigation-item__label">Calendario</A>
-                    </a>
-                </li>
-                <li class="wp-block-navigation-item wp-block-navigation-link">
-                    <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Contacto/Contacto.html" class="wp-block-navigation-item__content">
-                        <A href="./contacto.html" class="wp-block-navigation-item__label">Contacto</A>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <ul <div="" aria-hidden="true" id="i2srx4" class="wp-block-social-links has-normal-icon-size is-style-logos-only is-content-justification-center is-nowrap is-layout-flex wp-container-core-social-links-is-layout-2 wp-block-social-links-is-layout-flex"></ul>
+</head>
+<body>
+    <!-- Contenedor principal de la imagen y el texto -->
+    <div class="event-image-container">
+        <img src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Image/1%20aniversario.jpg?raw=true" alt="1 Aniversario" class="half-size-image">
+        <div class="event-title">Último Baile</div>
     </div>
-</div>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 A Coruña Dub Club. Todos os dereitos reservados.</title>
-    <style>
-        .custom-text-color {
-            color: #247494; /* Cambia el color del texto */
-        }
-    </style>
 
-<!-- Añade este estilo al CSS -->
-<style>
-    .move-down {
-        position: relative; /* Permite mover el bloque desde su posición original */
-        top: 1400px; /* Desplaza el bloque 1000px hacia abajo */
-    }
-</style>
+    <!-- Menú de navegación -->
+    <nav aria-label="Navegación 2" class="items-justified-center wp-block-navigation is-content-justification-center is-layout-flex wp-container-core-navigation-is-layout-2 wp-block-navigation-is-layout-flex">
+        <ul class="wp-block-navigation__container items-justified-center wp-block-navigation">
+            <li class="wp-block-navigation-item wp-block-navigation-link">
+                <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Quen-somos/Quen-somos.html" class="wp-block-navigation-item__content">Quen somos?</a>
+            </li>
+            <li class="wp-block-navigation-item wp-block-navigation-link">
+                <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Eventos/Eventos.html" class="wp-block-navigation-item__content">Eventos</a>
+            </li>
+            <li class="wp-block-navigation-item wp-block-navigation-link">
+                <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Tenda/tenda.html" class="wp-block-navigation-item__content">Tenda</a>
+            </li>
+            <li class="wp-block-navigation-item wp-block-navigation-link">
+                <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Calendario/Calendario.html" class="wp-block-navigation-item__content">Calendario</a>
+            </li>
+            <li class="wp-block-navigation-item wp-block-navigation-link">
+                <a href="https://acorunhadubclub.github.io/acorunhadublcub/Pages/Contacto/Contacto.html" class="wp-block-navigation-item__content">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        2024 A Coruña Dub Club. Todos os dereitos reservados.
+    </footer>
+</body>
 </html>
