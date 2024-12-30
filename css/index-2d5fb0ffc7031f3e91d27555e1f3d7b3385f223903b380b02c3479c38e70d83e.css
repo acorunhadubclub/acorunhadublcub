@@ -4,7 +4,7 @@
             flex-direction: column; /* Coloca elementos verticalmente */
             align-items: center; /* Centra horizontalmente */
             justify-content: center; /* Centra verticalmente */
-            height: 100vh; /* Ocupa toda la altura de la página */
+            height: 90vh; /* Ocupa toda la altura de la página */
             margin: 0; /* Elimina márgenes adicionales */
         }
         .half-size-image {
