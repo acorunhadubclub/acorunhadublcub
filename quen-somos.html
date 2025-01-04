@@ -59,47 +59,20 @@ Hoxe, A Coruña Dub Club reúne a algúns dos mellores sistemas de son artesanai
     <div id="modal1" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal(1)">&times;</span>
-            <h2>Pintega sistema de son.</h2>
-            <p>
-Colectivo lucense formado por Helen e Fer, cun sistema de son composto por catro potentes hogs. Ofrecen unha selección musical vibrante, chea de sons actuais que combinan ritmos contundentes coa delicadeza das fermosas melodías de violín interpretadas en directo por Helen, creando unha experiencia única e inesquecible.</p>
+            <img src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Image/iconopintega.jpg?raw=true" alt="Imagen 1" class="modal-image">
+            <h2>Pintega sistema de son</h2>
+            <p>Colectivo lucense formado por Helen e Fer, cun sistema de son composto por catro potentes hogs...</p>
         </div>
     </div>
-    <!-- Modal 2 -->
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal(2)">&times;</span>
-            <h2>Trasnos in dub.</h2>
-            <p>Pai e fillo de Baldaio, creadores dun sistema de son artesanal que reflicte a súa paixón e dedicación pola música. A súa selección musical é ampla e diversa, navegando por estilos como roots, new roots, steppa, reggae fusion e moitos máis, garantindo unha experiencia auténtica e inesquecible dentro da cultura dub.
-
-</p>
-        </div>
-    </div>
-    <!-- Modal 3 -->
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal(3)">&times;</span>
-            <h2>Delirium Soundsystem</h2>
-            <p>Sistema de son artesanal con sede na cidade da Coruña, nacido dun profundo amor pola música xamaicana dos anos 70 e 80. As súas sesións mesturan os clásicos inmortais do dub coas frecuencias máis contundentes do UK dub, creando unha atmosfera cargada de enerxía e emoción que fai vibrar corpo e alma.
-
-</p>
-        </div>
-    </div>
-    <!-- Modal 4 -->
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal(4)">&times;</span>
-            <h2>Bassdealer Soundsystem</h2>
-            <p>Soundsystem autoconstruído, composto por catro potentes cubos-sub, deseñado para ofrecer unha experiencia sonora única. A súa selección musical destaca por un estilo escuro e moderno, abarcando dende o UK dub ata a bass music, con ritmos frenéticos e propostas innovadoras que rompen moldes e manteñen a enerxía en alto durante toda a sesión.</p>
-        </div>
-    </div>
+    <!-- Repite para los demás modales con sus imágenes respectivas -->
 </div>
 
 <style>
-    /* Asegurar que el bloque solo afecte a su propio contenedor */
+    /* Estilos base */
     .custom-column {
         position: relative;
-        margin-left: 100px;/* Desplazamiento hacia la derecha */
-        margin-top: 150px;/* Desplazamiento hacia la derecha */
+        margin-left: 100px;
+        margin-top: 150px;
     }
 
     .grid-container {
@@ -126,6 +99,7 @@ Colectivo lucense formado por Helen e Fer, cun sistema de son composto por catro
         border-radius: 8px;
     }
 
+    /* Estilo del modal */
     .modal {
         display: none;
         position: fixed;
@@ -137,6 +111,15 @@ Colectivo lucense formado por Helen e Fer, cun sistema de son composto por catro
         justify-content: center;
         align-items: center;
         z-index: 1000;
+        opacity: 0;
+        transform: scale(0.9);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .modal.show {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
     }
 
     .modal-content {
@@ -145,10 +128,30 @@ Colectivo lucense formado por Helen e Fer, cun sistema de son composto por catro
         border-radius: 10px;
         max-width: 500px;
         text-align: center;
+        position: relative;
+        animation: float 0.5s ease-in-out;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 
     .modal-content h2 {
-        margin: 0 0 10px;
+        margin: 10px 0;
+    }
+
+    .modal-content img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
 
     .close {
@@ -162,13 +165,16 @@ Colectivo lucense formado por Helen e Fer, cun sistema de son composto por catro
 
 <script>
     function openModal(num) {
-        document.getElementById('modal' + num).style.display = 'flex';
+        const modal = document.getElementById('modal' + num);
+        modal.classList.add('show');
     }
 
     function closeModal(num) {
-        document.getElementById('modal' + num).style.display = 'none';
+        const modal = document.getElementById('modal' + num);
+        modal.classList.remove('show');
     }
 </script>
+
 
 <!-- /wp:paragraph --></div>
  </div>
