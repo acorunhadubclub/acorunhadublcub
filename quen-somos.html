@@ -56,7 +56,7 @@ Hoxe, A Coruña Dub Club reúne a algúns dos mellores sistemas de son artesanai
     </div>
 
     <!-- Modal 1 -->
-    <div id="modal1" class="modal">
+    <div id="modal1" class="modal" onclick="outsideClick(event, 1)">
         <div class="modal-content">
             <span class="close" onclick="closeModal(1)">&times;</span>
             <img src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Image/iconopintega.jpg?raw=true" alt="Imagen 1" class="modal-image">
@@ -124,9 +124,10 @@ Hoxe, A Coruña Dub Club reúne a algúns dos mellores sistemas de son artesanai
 
     .modal-content {
         background: white;
-        padding: 20px;
+        padding: 15px;
         border-radius: 10px;
-        max-width: 500px;
+        max-width: 80%; /* Se adapta mejor al tamaño del navegador */
+        width: 400px; /* Tamaño reducido */
         text-align: center;
         position: relative;
         animation: float 0.5s ease-in-out;
@@ -143,15 +144,15 @@ Hoxe, A Coruña Dub Club reúne a algúns dos mellores sistemas de son artesanai
         }
     }
 
-    .modal-content h2 {
-        margin: 10px 0;
-    }
-
     .modal-content img {
         width: 100%;
         height: auto;
         border-radius: 8px;
         margin-bottom: 10px;
+    }
+
+    .modal-content h2 {
+        margin: 10px 0;
     }
 
     .close {
@@ -172,6 +173,13 @@ Hoxe, A Coruña Dub Club reúne a algúns dos mellores sistemas de son artesanai
     function closeModal(num) {
         const modal = document.getElementById('modal' + num);
         modal.classList.remove('show');
+    }
+
+    function outsideClick(event, num) {
+        const modal = document.getElementById('modal' + num);
+        if (event.target === modal) {
+            closeModal(num);
+        }
     }
 </script>
 
