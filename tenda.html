@@ -14,6 +14,36 @@
     <textarea name="message" placeholder="Mensaje" required></textarea>
     <button type="submit">Enviar</button>
   </form>
+ <!-- Código JavaScript -->
+  <script type="module">
+    // Tu configuración de Firebase aquí
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+
+    const firebaseConfig = {
+      // Copia tu configuración de Firebase aquí
+     apiKey: "AIzaSyCBLgXrZTowgHgkIHEj6_-O2d5P9KtSA84",
+  authDomain: "a-corunha-dub-club.firebaseapp.com",
+  databaseURL: "https://a-corunha-dub-club-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "a-corunha-dub-club",
+  storageBucket: "a-corunha-dub-club.firebasestorage.app",
+  messagingSenderId: "335941056503",
+  appId: "1:335941056503:web:f58650a0f8d003b663e0f2",
+  measurementId: "G-HV3QY93L6W"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form));
+      push(ref(database, "formEntries"), data)
+        .then(() => alert("¡Formulario enviado!"))
+        .catch((err) => console.error(err));
+    });
+  </script>
 </div>
 </div>
 </div>
