@@ -15,7 +15,134 @@
 </div>
 </div>
 </div>
+<style>
+    :root {
+        --primary-color: #287795;
+        --background-color: #fdfbef;
+    }
 
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: var(--background-color);
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .calendar {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        width: 90%;
+        max-width: 600px;
+        background: var(--background-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar-header {
+        text-align: center;
+        padding: 10px;
+        background: var(--primary-color);
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 2px;
+    }
+
+    .day {
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid var(--primary-color);
+        background: white;
+        cursor: pointer;
+    }
+
+    .day:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .day.current {
+        background: var(--primary-color);
+        color: white;
+        font-weight: bold;
+    }
+
+    .day.event {
+        background: var(--primary-color);
+        color: white;
+        font-weight: bold;
+    }
+
+    .day-name {
+        font-weight: bold;
+        background: var(--primary-color);
+        color: white;
+        padding: 5px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="calendar">
+    <div class="calendar-header">Enero 2025</div>
+    <div class="calendar-grid">
+        <!-- Días de la semana -->
+        <div class="day-name">Lun</div>
+        <div class="day-name">Mar</div>
+        <div class="day-name">Mié</div>
+        <div class="day-name">Jue</div>
+        <div class="day-name">Vie</div>
+        <div class="day-name">Sáb</div>
+        <div class="day-name">Dom</div>
+
+        <!-- Días del mes -->
+        <div class="day"></div> <!-- Vacíos para ajustar el inicio -->
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day event" onclick="window.open('https://example.com/event1', '_blank')">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day current">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day event" onclick="window.open('https://example.com/event2', '_blank')">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+        <div class="day">31</div>
+    </div>
+</div>
 </head>
 <footer style="text-align: center; padding: 16px; font-size: 14px; background-color: #fdfbef; color: #207690;">
     A Coruña Dub Club 2025 Todos os dereitos reservados ©.
