@@ -13,7 +13,140 @@
 </div>
 </div>
 </div>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .calendar {
+        width: 90%;
+        max-width: 600px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .calendar-header {
+        text-align: center;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+    }
+    .calendar-header h2 {
+        margin: 0;
+    }
+    .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background-color: #f0f0f0;
+        padding: 10px 0;
+        text-align: center;
+    }
+    .days span {
+        font-weight: bold;
+        color: #333;
+    }
+    .dates {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        padding: 10px;
+    }
+    .date {
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .date:hover {
+        background-color: #e0f7fa;
+    }
+    .today {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .event {
+        background-color: #ff9800;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div class="calendar">
+    <div class="calendar-header">
+        <h2 id="monthYear"></h2>
+    </div>
+    <div class="days">
+        <span>Sun</span>
+        <span>Mon</span>
+        <span>Tue</span>
+        <span>Wed</span>
+        <span>Thu</span>
+        <span>Fri</span>
+        <span>Sat</span>
+    </div>
+    <div class="dates" id="calendarDates"></div>
+</div>
 
+<script>
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+
+    const daysInMonth = (month, year) => {
+        return new Date(year, month + 1, 0).getDate();
+    };
+
+    const startDayOfMonth = (month, year) => {
+        return new Date(year, month, 1).getDay();
+    };
+
+    const renderCalendar = () => {
+        const monthYear = document.getElementById('monthYear');
+        const calendarDates = document.getElementById('calendarDates');
+
+        const monthNames = [
+            'January', 'February', 'March', 'April', 'May', 'June', 
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+
+        monthYear.textContent = `${monthNames[currentMonth]} ${currentYear}`;
+
+        const totalDays = daysInMonth(currentMonth, currentYear);
+        const startDay = startDayOfMonth(currentMonth, currentYear);
+
+        calendarDates.innerHTML = '';
+
+        for (let i = 0; i < startDay; i++) {
+            const emptyCell = document.createElement('div');
+            calendarDates.appendChild(emptyCell);
+        }
+
+        for (let day = 1; day <= totalDays; day++) {
+            const dateCell = document.createElement('div');
+            dateCell.className = 'date';
+            dateCell.textContent = day;
+
+            if (day === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+                dateCell.classList.add('today');
+            }
+
+            dateCell.addEventListener('click', () => {
+                window.location.href = `event.html?date=${day}-${currentMonth + 1}-${currentYear}`;
+            });
+
+            calendarDates.appendChild(dateCell);
+        }
+    };
+
+    renderCalendar();
+</script>
 </head>
 <footer style="text-align: center; padding: 16px; font-size: 14px; background-color: #fdfbef; color: #207690;">
     A Coruña Dub Club 2025 Todos os dereitos reservados ©.
