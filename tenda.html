@@ -13,14 +13,18 @@
 </div>
 </div>
 <style>
-body {
+    body {
       font-family: Arial, sans-serif;
       background-color: #fdfbef;
       color: #207690;
-    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
 
-#contactForm {
+    #contactForm {
       background-color: #ffffff;
       border: 2px solid #207690;
       border-radius: 10px;
@@ -30,8 +34,8 @@ body {
       max-width: 400px;
     }
 
-#contactForm input,
-#contactForm textarea {
+    #contactForm input,
+    #contactForm textarea {
       width: calc(100% - 20px);
       padding: 10px;
       margin-bottom: 15px;
@@ -42,19 +46,19 @@ body {
       color: #207690;
     }
 
-#contactForm input:focus,
-#contactForm textarea:focus {
+    #contactForm input:focus,
+    #contactForm textarea:focus {
       outline: none;
       border-color: #207690;
       box-shadow: 0 0 5px rgba(32, 118, 144, 0.5);
     }
 
-#contactForm textarea {
+    #contactForm textarea {
       resize: none;
       height: 100px;
     }
 
-#contactForm button {
+    #contactForm button {
       width: 100%;
       padding: 10px;
       background-color: #207690;
@@ -67,32 +71,34 @@ body {
       transition: background-color 0.3s;
     }
 
-#contactForm button:hover {
+    #contactForm button:hover {
       background-color: #16556e;
     }
-</style>
-<form id="contactForm">
+  </style>
+</head>
+<body>
+  <form id="contactForm">
     <input type="text" name="name" placeholder="Nombre" required />
     <input type="email" name="email" placeholder="Correo" required />
     <textarea name="message" placeholder="Mensaje" required></textarea>
     <button type="submit">Enviar</button>
   </form>
- <!-- Código JavaScript -->
+
+  <!-- Código JavaScript -->
   <script type="module">
     // Tu configuración de Firebase aquí
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
     import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
     const firebaseConfig = {
-      // Copia tu configuración de Firebase aquí
-     apiKey: "AIzaSyCBLgXrZTowgHgkIHEj6_-O2d5P9KtSA84",
-  authDomain: "a-corunha-dub-club.firebaseapp.com",
-  databaseURL: "https://a-corunha-dub-club-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "a-corunha-dub-club",
-  storageBucket: "a-corunha-dub-club.firebasestorage.app",
-  messagingSenderId: "335941056503",
-  appId: "1:335941056503:web:f58650a0f8d003b663e0f2",
-  measurementId: "G-HV3QY93L6W"
+      apiKey: "AIzaSyCBLgXrZTowgHgkIHEj6_-O2d5P9KtSA84",
+      authDomain: "a-corunha-dub-club.firebaseapp.com",
+      databaseURL: "https://a-corunha-dub-club-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "a-corunha-dub-club",
+      storageBucket: "a-corunha-dub-club.firebasestorage.app",
+      messagingSenderId: "335941056503",
+      appId: "1:335941056503:web:f58650a0f8d003b663e0f2",
+      measurementId: "G-HV3QY93L6W"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -103,7 +109,10 @@ body {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(form));
       push(ref(database, "formEntries"), data)
-        .then(() => alert("¡Formulario enviado!"))
+        .then(() => {
+          alert("¡Formulario enviado!");
+          location.reload(); // Recargar la página después de enviar el formulario
+        })
         .catch((err) => console.error(err));
     });
   </script>
