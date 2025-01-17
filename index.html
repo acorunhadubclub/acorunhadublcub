@@ -70,6 +70,57 @@
         position: relative; /* Asegura que el desplazamiento afecte al elemento */
     }
 </style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Flotante</title>
+    <style>
+        /* Estilo para la ventana flotante */
+        .ventana-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            height: auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 10px;
+            z-index: 1000;
+        }
+
+        .ventana-flotante img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .ventana-flotante a {
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .ventana-flotante a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ventana flotante -->
+    <div class="ventana-flotante">
+        <img src="ruta-de-la-imagen.jpg" alt="Entradas a venta">
+        <a href="enlace-a-tu-pagina.html" target="_blank">Entradas a venta</a>
+    </div>
+
+</body>
 <br><br>
 </head>
 <footer style="text-align: center; padding: 16px; font-size: 14px; background-color: #fdfbef; color: #207690;">
