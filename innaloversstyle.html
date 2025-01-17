@@ -63,19 +63,32 @@
     </div>
   </div>
 <!-- /wp:column --></div>
-
-<script src="https://www.paypal.com/sdk/js?client-id=BAAM17uAKYEYEX0aNnm7qDtO_iOj7OA00BV-tE72E3ZL8iQiFCIX5tqu7wOo5Z1lNOUd4POuTeilR4nE2g&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
-<div id="paypal-container-552RZAMACEXW8"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "552RZAMACEXW8",
-  }).render("#paypal-container-552RZAMACEXW8")
-</script>
-
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dmedium)","bottom":"var(\u002d\u002dwp\u002d\u002dcustom\u002d\u002dspacing\u002d\u002dmedium)"},"margin":{"top":"0px"}},"elements":{"link":{"color":{"text":"var:preset|color|background"}}},"position":{"type":""}},"backgroundColor":"foreground","textColor":"background","layout":{"inherit":"true","type":"constrained","justifyContent":"center"}} -->
-<div class="wp-block-group alignfull has-background-color has-foreground-background-color has-text-color has-background has-link-color" style="margin-top:0px;padding-top:var(--wp--custom--spacing--medium);padding-bottom:var(--wp--custom--spacing--medium)"><!-- wp:group {"align":"full","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top","justifyContent":"center"}} -->
-<div class="wp-block-group alignfull"><!-- wp:spacer {"width":"0px","style":{"layout":{"flexSize":"100px","selfStretch":"fixed"}}} -->
-<div style="height:200px;width:0px" aria-hidden="true" class="wp-block-spacer"></div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal Button Centered</title>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAM17uAKYEYEX0aNnm7qDtO_iOj7OA00BV-tE72E3ZL8iQiFCIX5tqu7wOo5Z1lNOUd4POuTeilR4nE2g&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    #paypal-container-552RZAMACEXW8 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="paypal-container-552RZAMACEXW8"></div>
+  <script>
+    paypal.HostedButtons({
+      hostedButtonId: "552RZAMACEXW8",
+    }).render("#paypal-container-552RZAMACEXW8");
+  </script>
+</body>
 <!-- /wp:spacer -->
 
 
