@@ -4,66 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Coruña Dub Club</title>
-    <link rel="icon" type="image/png" href="https://acorunhadubclub.wordpress.com/wp-content/uploads/2024/11/lolologo-sen-fondo-3.png?w=823">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <header class="wp-block-group alignfull">
-        <div class="wp-block-group alignwide header-content">
-            <figure class="wp-block-image logo-container">
-                <img loading="lazy" 
-                     src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Logo/ACDCLOGO.png?raw=true" 
-                     alt="Logo A Coruña Dub Club"
-                     class="wp-image-116">
-            </figure>
-            
-            <nav class="main-navigation" aria-label="Navegación principal">
-                <ul class="nav-list">
-                    <li><a href="./quen-somos.html">Quen Somos?</a></li>
-                    <li><a href="./eventos.html">Eventos</a></li>
-                    <li><a href="./tenda.html">Tenda</a></li>
-                    <li><a href="./calendario.html">Calendario</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo A Coruña Dub Club">
+            </div>
+            <ul class="menu">
+                <li><a href="#quen-somos">Quen somos?</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#tenda">Tenda</a></li>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="main-content">
-        <section class="wp-block-columns content-section">
-            <div class="wp-block-column text-content">
-                <h2 class="main-heading">Sound System na Galiza</h2>
-                <p class="description-text">
-                    A Coruña Dub Club é unha asociación formada por varios colectivos galegos...
-                </p>
-            </div>
-            
-            <div class="wp-block-column image-content">
-                <div class="wp-block-group">
-                    <img src="https://acorunhadubclub.wordpress.com/wp-content/uploads/2024/11/lolologo-sen-fondo-3.png" 
-                         alt="Ilustración Dub"
-                         class="dub-illustration">
-                </div>
-            </div>
+    <main>
+        <section id="quen-somos" class="content-section">
+            <h1>Quen somos?</h1>
+            <!-- Contido aquí -->
         </section>
 
-        <div class="event-image-container">
-            <img src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Image/%C3%9Altimo%20baile.png?raw=true" 
-                 alt="Próximo evento" 
-                 class="half-size-image">
-        </div>
+        <section id="eventos" class="content-section">
+            <h1>Eventos</h1>
+            <!-- Contido aquí -->
+        </section>
+
+        <section id="tenda" class="content-section">
+            <h1>Tenda</h1>
+            <!-- Contido aquí -->
+        </section>
+
+        <section id="calendario" class="content-section">
+            <h1>Calendario</h1>
+            <!-- Contido aquí -->
+        </section>
+
+        <section id="contacto" class="content-section">
+            <h1>Contacto</h1>
+            <!-- Contido aquí -->
+        </section>
     </main>
 
-    <aside class="ventana-flotante" aria-label="Entradas disponibles">
-        <img src="https://github.com/acorunhadubclub/acorunhadublcub/blob/main/Assets/Image/Estreno%20delirium.jpg?raw=true" 
-             alt="Evento Delirium"
-             loading="lazy">
-        <a href="innaloversstyle.html" class="ticket-button">Entradas a venta</a>
-    </aside>
+    <div class="floating-tab">
+        <a href="#">
+            <img src="images/floating-icon.png" alt="Acceso rápido">
+        </a>
+    </div>
 
-    <footer class="main-footer">
-        <p>A Coruña Dub Club 2025 © Todos os dereitos reservados</p>
+    <footer>
+        <div class="copyright">
+            © 2024 A Coruña Dub Club. Todos los derechos reservados.
+        </div>
     </footer>
 </body>
 </html>
