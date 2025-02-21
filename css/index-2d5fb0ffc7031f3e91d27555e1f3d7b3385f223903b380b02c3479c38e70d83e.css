@@ -25,6 +25,37 @@ body {
     padding: 2rem 0;
     background-color: var(--color-background);
 }
+/* Modificar secciones */
+.content-section {
+    padding: 80px 50px;
+    border-bottom: 4px solid #207690;
+    min-height: 60vh;
+    position: relative;
+}
+
+.content-section h1 {
+    color: #FDFBEF;
+    background-color: #207690;
+    padding: 15px 30px;
+    margin: -65px 0 40px -50px;
+    display: inline-block;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.content-section:nth-child(even) {
+    background-color: transparent;
+}
+
+/* Añadir esto al final del CSS */
+.content-section:first-child h1 {
+    margin-top: 0;
+}
+
+.content-section:last-child {
+    border-bottom: none;
+}
 
 .header-content {
     max-width: var(--max-width);
